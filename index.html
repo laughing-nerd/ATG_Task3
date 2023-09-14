@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layer Scrolling Animation</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="svgContainer">
+            <svg version="1.1" id="transring" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 414 414"
+                style="enable-background:new 0 0 414 414; background-color: transparent" xml:space="preserve">
+
+                <path id="Transparent_Ring" class="transrg"
+                    style="opacity:0.4;fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;enable-background:new"
+                    d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+                c-47.8,0-91-19.4-122.3-50.7"></path>
+
+
+                <path id="Opaque_Ring" class="transrgwht" stroke-dasharray="0,1000"
+                    style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; stroke-miterlimit: 10; stroke-dasharray: 10, 1000;"
+                    d="M84.2,85c31.3-31.5,74.7-51,122.7-51c95.5,0,173,77.5,173,173s-77.5,173-173,173
+                        c-47.8,0-91-19.4-122.3-50.7"></path>
+
+
+                <g id="Dots1" class="dots-nav dots-fill">
+                    <g>
+                        <path class="dotsst dotsfill1" style="fill: rgb(0, 146, 255); opacity: 1;"
+                            d="M84,80 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro1"
+                            style="opacity: 1; fill: none; stroke: rgba(255, 255, 255, 0.3); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M84,80c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"></path>
+                    </g>
+                </g>
+                <g id="Dots2" class="dots-nav dots-fill">
+                    <g>
+                        <path class="dotsst dotsfill2" style="fill: rgba(255, 255, 255, 0.3); opacity: 1;"
+                            d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro2"
+                            style="opacity: 1; fill: none; stroke: rgba(255, 255, 255, 0.3); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"></path>
+                    </g>
+                </g>
+                <g id="Dots3" class="dots-nav dots-fill">
+                    <g>
+                        <path class="dotsst dotsfill3" style="fill: rgba(255, 255, 255, 0.3); opacity: 1;"
+                            d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro3"
+                            style="opacity: 1; fill: none; stroke: rgba(255, 255, 255, 0.3); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"></path>
+                    </g>
+                </g>
+                <g id="Dots4" class="dots-nav dots-fill">
+                    <g>
+                        <path class="dotsst dotsfill4" style="fill: rgba(255, 255, 255, 0.3); opacity: 1;"
+                            d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro4"
+                            style="opacity: 1; fill: none; stroke: rgba(255, 255, 255, 0.3); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"></path>
+                    </g>
+                </g>
+                <g id="Dots5" class="dots-nav dots-fill">
+                    <g>
+                        <path class="dotsst dotsfill5" style="fill: rgba(255, 255, 255, 0.3); opacity: 1;"
+                            d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro5"
+                            style="opacity: 1; fill: none; stroke: rgba(255, 255, 255, 0.3); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"></path>
+                    </g>
+                </g>
+                <g id="Dots6" class="dots-nav dots-fill">
+                    <g>
+                        <path class="dotsst dotsfill6" style="fill: rgba(255, 255, 255, 0.3); opacity: 1;"
+                            d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro6"
+                            style="opacity: 1; fill: none; stroke: rgba(255, 255, 255, 0.3); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"></path>
+                    </g>
+                </g>
+                <g id="Dots7" class="dots-nav dots-fill">
+                    <g>
+                        <path class="dotsst dotsfill7" style="fill: rgba(255, 255, 255, 0.3); opacity: 1;"
+                            d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"></path>
+                    </g>
+                    <g>
+                        <path class="dotsstro7"
+                            style="opacity: 1; fill: none; stroke: rgba(255, 255, 255, 0.3); stroke-width: 2; stroke-miterlimit: 10;"
+                            d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <div class="scrollify-section" data-left="rgb(22,38,61)" data-right="rgb(15,18,28)">
+            <div class="left">
+                <h1>ABC 123</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center justify-content-between my-2"
+                    style="width: 90%; font-size: 1.4rem;">
+                    <p>View Case Study ➜</p>
+                    <p style="letter-spacing: 10px;">SKIP</p>
+                </div>
+                <div class="center">
+                    <h5>Redefining</h5>
+                    <h1>UX strategy</h1>
+                    <h5 class="text-end">and UI design</h5>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="./assets/pizza_box.png" alt="..." class="img-fluid img-first">
+                <img src="./assets/dominos-bread.png" alt="..." class="img-fluid img-first">
+                <img src="./assets/ux-strategy-for-mobile-app-devlopment.png" alt="..." class="img-fluid img-first">
+                <img src="./assets/domi-img1.png" alt="..." class="img-fluid img-first">
+                <img src="./assets/dominos-bread1.png" alt="..." class="img-fluid img-first">
+            </div>
+        </div>
+        <div class="scrollify-section" data-left="rgb(78,38,207)" data-right="rgb(29,3,99)">
+            <div class="left">
+                <h1>ABC 456</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center justify-content-between my-2"
+                    style="width: 90%; font-size: 1.4rem;">
+                    <p>View Case Study ➜</p>
+                    <p style="letter-spacing: 10px;">SKIP</p>
+                </div>
+                <div class="center">
+                    <h5>The Next Big</h5>
+                    <h1>Blockchain</h1>
+                    <h5 class="text-end">Revolution</h5>
+                </div>
+            </div>
+            <div class="right">
+                <img src="./assets/veme-app-ui-design.png" alt="..." class="img-fluid img-second">
+                <img src="./assets/veme-blockchain-app-developed.png" alt="..." class="img-fluid img-second">
+            </div>
+        </div>
+        <div class="scrollify-section" data-left="rgb(14,16,59)" data-right="rgb(20,22,72)">
+            <div class="left">
+                <h1>ABC 789</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center justify-content-between my-2"
+                    style="width: 90%; font-size: 1.4rem;">
+                    <p>View Case Study ➜</p>
+                    <p style="letter-spacing: 10px;">SKIP</p>
+                </div>
+                <div class="center">
+                    <h5>Powered by advance</h5>
+                    <img src="./assets/nasa-mobile-app.png" alt="..." class="img-fluid">
+                    <h5 class="text-end">algorithms</h5>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="./assets/measure-total-body-weight-through-fitness-app.png" alt="..."
+                    class="img-fluid img-third">
+                <img src="./assets/nasa-fitness-tracking-mobile-app.png" alt="..." class="img-fluid img-third">
+            </div>
+        </div>
+        <div class="scrollify-section" data-left="rgb(100,17,169)" data-right="rgb(205,202,206)">
+            <div class="left">
+                <img src="./assets/world-communication-awards-for-best-digital-experience.png" alt="..."
+                    class="img-fluid img-badge">
+                <h1>ABC 673</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center justify-content-between my-2"
+                    style="width: 90%; font-size: 1.4rem;">
+                    <p>View Case Study ➜</p>
+                    <p style="letter-spacing: 10px;">SKIP</p>
+                </div>
+                <div class="center">
+                    <h1>25M+ Downloads</h1>
+                    <h5 class="text-end">on app store & google play store</h5>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="./assets/nexgtv-entertainment-mobile-app-development.png" alt="..."
+                    class="img-fluid img-fourth">
+                <img src="./assets/nexgtv-mobile-app-ui-design.png" alt="..." class="img-fluid img-fourth">
+            </div>
+        </div>
+        <div class="scrollify-section" data-left="rgb(2,43,146)" data-right="rgb(15,18,28)">
+            <div class="left">
+                <h1>ABC 743</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center justify-content-between my-2"
+                    style="width: 90%; font-size: 1.4rem;">
+                    <p>View Case Study ➜</p>
+                    <p style="letter-spacing: 10px;">SKIP</p>
+                </div>
+                <div class="center">
+                    <h5>Developing ERP Solution for</h5>
+                    <h1>Text Headline</h1>
+                    <h5 class="text-end">in furniture industry</h5>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="./assets/interior.jpg" alt="..." class="img-fluid img-fifth">
+                <img src="./assets/erp-app-development-service.png" alt="..." class="img-fluid img-fifth">
+            </div>
+        </div>
+        <div class="scrollify-section" data-left="rgb(0,131,77)" data-right="rgb(1,182,107)">
+            <div class="left">
+                <img src="./assets/mobile-app-of-the-year-by-entrepreneur.png" alt="..." class="img-fluid img-badge">
+                <h1>ABC 961</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center justify-content-between my-2"
+                    style="width: 90%; font-size: 1.4rem;">
+                    <p>View Case Study ➜</p>
+                    <p style="letter-spacing: 10px;">SKIP</p>
+                </div>
+                <div class="center">
+                    <h5>Biggest Classifieds</h5>
+                    <h1>East Asia</h1>
+                    <h5 class="text-end">Countries</h5>
+                </div>
+            </div>
+            <div class="right">
+                <img src="./assets/melltoo-img2.png" alt="..." class="img-fluid img-sixth">
+                <img src="./assets/melltoo-img1.png" alt="..." class="img-fluid img-sixth">
+            </div>
+        </div>
+        <div class="scrollify-section" data-left="rgb(18,98,232)" data-right="rgb(35,207,235)">
+            <div class="left">
+                <h1>ABC 504</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center justify-content-between my-2"
+                    style="width: 90%; font-size: 1.4rem;">
+                    <p>View Case Study ➜</p>
+                    <p style="letter-spacing: 10px;">SKIP</p>
+                </div>
+                <div class="center">
+                    <h5>Text Headline</h5>
+                    <h1>Text Headline</h1>
+                    <h5 class="text-end">Footer Headline</h5>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="./assets/karavan-social-networking-app-screen.png" alt="..." class="img-fluid img-seventh">
+                <img src="./assets/social-networking-app-case-study.png" alt="..." class="img-fluid img-seventh">
+                <img src="./assets/developers-for-social-media-app.png" alt="..." class="img-fluid img-seventh">
+                <img src="./assets/karavan_2.png" alt="..." class="img-fluid img-seventh">
+                <img src="./assets/karavan-social-networking-app-screen-2.png" alt="..." class="img-fluid img-seventh">
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------------- Mobile View ---------------------------------------->
+    <div class="wrapper-mobile">
+        <div class="slider first">
+            <div class="top-div">
+                <img src="./assets/pizza_box.png" alt="..." class="img-fluid img-first">
+                <img src="./assets/dominos-bread.png" alt="..." class="img-fluid img-first">
+                <img src="./assets/ux-strategy-for-mobile-app-devlopment.png" alt="..." class="img-fluid img-first">
+                <img src="./assets/domi-img1.png" alt="..." class="img-fluid img-first">
+                <img src="./assets/dominos-bread1.png" alt="..." class="img-fluid img-first">
+            </div>
+            <div class="bottom-div">
+                <h1>ABC 123</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center gap-3">
+                    <p>View case study ➜</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider second">
+            <div class="top-div">
+                <img src="./assets/veme-app-ui-design.png" alt="..." class="img-fluid img-second">
+                <img src="./assets/veme-blockchain-app-developed.png" alt="..." class="img-fluid img-second">
+            </div>
+            <div class="bottom-div">
+                <h1>ABC 456</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center gap-3">
+                    <p>View case study ➜</p>
+                    <p style="background: rgb(212,36,143);" class="px-3 py-2 rounded-pill">Coming Soon</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider third">
+            <div class="top-div">
+                <img src="./assets/measure-total-body-weight-through-fitness-app.png" alt="..."
+                    class="img-fluid img-third">
+                <img src="./assets/nasa-fitness-tracking-mobile-app.png" alt="..." class="img-fluid img-third">
+            </div>
+            <div class="bottom-div">
+                <h1>ABC 789</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center gap-3">
+                    <p>View case study ➜</p>
+                    <p style="background: rgb(255,255,255); color: #000" class="px-3 py-2 rounded-pill">Coming Soon</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider fourth">
+            <div class="top-div">
+                <img src="./assets/nexgtv-entertainment-mobile-app-development.png" alt="..."
+                    class="img-fluid img-fourth">
+                <img src="./assets/nexgtv-mobile-app-ui-design.png" alt="..." class="img-fluid img-fourth">
+            </div>
+            <div class="bottom-div">
+                <div class="badge-div1">
+                    <img src="./assets/world-communication-awards-for-best-digital-experience.png" alt="..."
+                        class="img-fluid img-badge-mobile">
+                </div>
+                <h1>ABC 673</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center gap-3">
+                    <p>View case study ➜</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider fifth">
+            <div class="top-div">
+                <img src="./assets/interior.jpg" alt="..." class="img-fluid img-fifth">
+                <img src="./assets/erp-app-development-service.png" alt="..." class="img-fluid img-fifth">
+            </div>
+            <div class="bottom-div">
+                <h1>ABC 743</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center gap-3">
+                    <p>View case study ➜</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider sixth">
+            <div class="top-div">
+                <img src="./assets/melltoo-img2.png" alt="..." class="img-fluid img-sixth">
+                <img src="./assets/melltoo-img1.png" alt="..." class="img-fluid img-sixth">
+            </div>
+            <div class="bottom-div">
+                <div class="badge-div2">
+                    <img src="./assets/world-communication-awards-for-best-digital-experience.png" alt="..."
+                        class="img-fluid img-badge-mobile">
+                </div>
+                <h1>ABC 961</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center gap-3">
+                    <p>View case study ➜</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider seventh">
+            <div class="top-div">
+                <img src="./assets/karavan-social-networking-app-screen.png" alt="..." class="img-fluid img-seventh">
+                <img src="./assets/social-networking-app-case-study.png" alt="..." class="img-fluid img-seventh">
+                <img src="./assets/developers-for-social-media-app.png" alt="..." class="img-fluid img-seventh">
+                <img src="./assets/karavan_2.png" alt="..." class="img-fluid img-seventh">
+                <img src="./assets/karavan-social-networking-app-screen-2.png" alt="..." class="img-fluid img-seventh">
+            </div>
+            <div class="bottom-div">
+                <h1>ABC 504</h1>
+                <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Corrupti,
+                    ipsum!</p>
+                <div class="d-flex align-items-center gap-3">
+                    <p>View case study ➜</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="./js/jquery.scrollify.js"></script>
+    <script src="./js/jquery.scrollie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
